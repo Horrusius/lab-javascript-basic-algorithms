@@ -46,10 +46,13 @@ function countWords(str) {
     const wordsArr = str.split(' ');
     const numberOfWords = wordsArr.length;
     console.log(numberOfWords);
-   
-    const etCount = str.indexOf("et");
+
+    let etCount = 0;
+    for (let word of wordsArr) {
+        if (word.includes('et')) etCount++;
+    }
     console.log(etCount);
-  }
+}
 
 countWords(longText);
 
